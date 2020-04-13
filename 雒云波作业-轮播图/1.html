@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #java-tom {
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        #java {
+            width: 800px;
+            height: 400px;
+
+        }
+
+        #java img {
+            width: 800px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        #java-tom ul {
+            margin: 0;
+            padding: 0;
+            width: 400px;
+            height: 80px;
+            display: flex;
+            position: absolute;
+            bottom: -10px;
+            left: 33%;
+        }
+
+        #java-tom ul>li {
+            list-style: none;
+            width: 16px;
+            height: 4px;
+            background-color: gray;
+            margin: 10px;
+        }
+
+        .con {
+            opacity: 1 !important;
+        }
+
+        .dir {
+            background-color: red !important;
+        }
+
+        /* ------------------------------------------------------- */
+
+
+        #web-tom {
+            width: 1000px;
+            margin: 100px auto;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #web-tom img {
+            width: 1000px;
+            height: 240px;
+            flex-shrink: 0;
+        }
+
+        #header {
+            width: 7000px;
+            display: flex;
+            position: absolute;
+            left: 0;
+            transition: all .5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="java-tom">
+        <div id="java">
+            <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/f69c41a0f6fd9f991967a74da6947bf1.jpeg?x-bce-process=image/crop,x_0,y_0,w_899,h_489"
+                alt="">
+            <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/ed6e3d34057d7cdec7c777aac9ece0f6.jpeg?x-bce-process=image/crop,x_0,y_0,w_1000,h_544"
+                alt="">
+            <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/24f07e315645b4ea99af01a4e2ee2fbb.jpeg?x-bce-process=image/crop,x_0,y_0,w_930,h_506"
+                alt="">
+            <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/f46be0418c12609cdaf16616298e680a.jpeg?x-bce-process=image/crop,x_0,y_0,w_945,h_514"
+                alt="">
+            <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/82c3aed81776a01ad64248149e2e5cc9.jpeg?x-bce-process=image/crop,x_0,y_0,w_900,h_490"
+                alt="">
+            <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/fb6d5e2217e7cf393a6206cea0928723.jpeg?x-bce-process=image/crop,x_0,y_0,w_930,h_506"
+                alt="">
+            <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/27efefd731aaf6f3f2369b8a0b0c98fd.jpeg?x-bce-process=image/crop,x_0,y_0,w_899,h_490"
+                alt="">
+            <img src="http://contentcms-bj.cdn.bcebos.com/cmspic/067785f1e25ea5a4058515451fe78ed9.jpeg?x-bce-process=image/crop,x_0,y_0,w_899,h_489"
+                alt="">
+
+        </div>
+        <ul id="qiu">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="web-tom">
+        <div id="header">
+            <img src="https://img.zcool.cn/community/0196755e8be04ca801216518c5f783.jpg@1380w" alt="" title="1">
+            <img src="https://img.zcool.cn/community/014b005e8be094a80121651876ec18.jpg@1380w" alt="" title="2">
+            <img src="https://img.zcool.cn/community/01bd135e84068ba80120a89501f88d.png@1380w" alt="" title="3">
+            <img src="https://img.zcool.cn/community/0110175e8406a3a8012165180cde75.png@1380w" alt="" title="4">
+            <img src="https://img.zcool.cn/community/015a3c5e8406eaa80121651832107d.png@1380w" alt="" title="5">
+            <img src="https://img.zcool.cn/community/01a2675e840704a80120a8952b329a.png@1380w" alt="" title="6">
+            <img src="https://img.zcool.cn/community/0196755e8be04ca801216518c5f783.jpg@1380w" alt="" title="1">
+        </div>
+    </div>
+
+
+    <script>
+
+        var jav = java.children
+        var x = 0
+        var s = qiu.children
+        jav[x].style.opacity = 1
+        s[x].className = "dir"
+        setInterval(() => {
+            if (x == jav.length - 1) {
+                // console.log(x)
+                s[7].className = ""
+                jav[x].className = ""
+                x = 0
+                jav[x].className = "con"
+                s[x].className = "dir"
+            } else {
+                // console.log(x)
+                s[x].className = ""
+                jav[x].className = ""
+                jav[x].style.opacity = 0
+                x += 1
+                // console.log(x)
+                s[x].className = "dir"
+                jav[x].className = "con"
+            }
+            // console.log(jav.length)
+        }, 1000);
+
+
+
+
+        // =========================================
+
+
+        var chu = 0
+        var banner = header.children
+        console.log(banner.length)
+        var c = header
+        setInterval(() => {
+                chu += 1
+                c.style.left = chu * -1000 + "px"
+        }, 1100);
+
+        c.addEventListener("transitionend", function () {
+            if (chu == 6) {
+                c.style.transition = "all 0s"
+                c.style.left = 0
+                chu = 0
+            }
+
+            setTimeout(() => {
+                c.style.transition = "all .5s"
+            }, 16.7);
+        })
+    </script>
+</body>
+
+</html>
